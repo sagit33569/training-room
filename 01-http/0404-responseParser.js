@@ -1,3 +1,8 @@
+/**
+ * @description HTTP响应解析器 1. 解析响应行 2. 解析响应头 3. 解析响应体 4. 解析响应结束
+ * @date 2023-04-04
+ * @author: sagit
+ */
 class ResponseParser {
   constructor() {
     this.statusCode = 0;
