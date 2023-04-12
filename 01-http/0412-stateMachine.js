@@ -1,8 +1,6 @@
 /**
  * @description 有限状态机 FSM finite state machine
- * @description 概念： 每一个状态是一个机器,有输入、输出的逻辑，以及状态的迁移
- * @description 每一个状态就是一个机器
- * @description 状态机的写法，每一个状态是一个函数
+ * @description 概念： 每一个状态是一个机器(由函数实现),有输入、输出的逻辑，以及状态的迁移
  * @date 2021-04-12
  * @author: sagit
  */
