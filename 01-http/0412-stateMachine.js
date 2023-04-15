@@ -26,7 +26,7 @@ function start(char) {
       isClose: false,
     };
     return tag;
-  } else {
+  } else { // 否则递归解析文本
     return start;
   }
 }
@@ -134,7 +134,8 @@ function attributeValue(char) {
  */
 function doubleQuoted(char) {
   // console.log(char, "doubleQuoted");
-  if (char === '"') { // 将属性名和属性值添加到标签token
+  if (char === '"') {
+    // 此时因在attributeValue内以判断过开头的双引号，这里的双引号为闭合，因此属性值已获取完毕，将属性名和属性值添加到标签token的attributes对象内
     tagToken.attributes[attributeNameStr] = attributeValueStr;
     return afterAttribute;
   } else { // 记录属性值
@@ -156,7 +157,7 @@ function afterAttribute(char) {
     emit(tagToken);
     return start;
   } else { // 如果不是空格也不是结束标签，则报错
-    throw new Error("");
+    throw new Error("invalid Tag");
   }
 }
 

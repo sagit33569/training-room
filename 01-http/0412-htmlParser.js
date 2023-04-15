@@ -7,6 +7,10 @@ const { start, setEmitCb } = require("./0412-stateMachine");
 
 /**
  * @description: 栈类型的数据结构，用于存储解析过程中的标签token
+ * @description: 栈是一种运算受限的线性表，只允许在表位（栈顶）插入和删除数据
+ * @description: 栈的特点是先进后出，后进先出 
+ * @description: 向栈顶添加元素，叫做入栈，入栈操作也叫做压栈
+ * @description: 从栈顶删除元素，叫做出栈，出栈操作也叫做弹栈
  */
 let stack = [{
   type: 'document',
